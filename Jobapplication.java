@@ -1,28 +1,19 @@
 import java.io.Serializable;
-public class Jobapplication implements Serializable{
-    private String applicationid;
+
+public class Jobapplication implements Serializable {
     private String jobid;
-    private String jobseekerid;
-    private String status;
-    public Jobapplication(String applicationid,String jobid,String jobseekerid){
-        this.applicationid=applicationid;
-        this.jobid=jobid;
-        this.jobseekerid=jobseekerid;
-        this.status="Pending...!";
+    private String email;
+
+    public Jobapplication(String jobid, String email) {
+        this.jobid = jobid;
+        this.email = email;
     }
-    public String getApplicationid(){
-        return applicationid;
-    }
-    public String getJobid(){
+
+    public String getJobId() {
         return jobid;
     }
-    public String getJobseekerid(){
-        return jobseekerid;
-    }
-    public String getStatus(){
-        return status;
-    }
-    public void updatestatus(String newstatus){
-        this.status=newstatus;
+
+    public String getJobseekeremail() {
+        return email;
     }
 }
