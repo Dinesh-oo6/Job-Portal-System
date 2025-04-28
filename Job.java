@@ -1,0 +1,26 @@
+import java.io.Serializable;
+
+public class Job implements Serializable {
+    private String jobid;
+    private String title;
+    private String description;
+    private double salary;
+    public Job(String jobid, String title, String description, double salary) {
+        this.jobid = jobid;
+        this.title = title;
+        this.description = description;
+        this.salary = salary;
+    }
+    public String getJobId() {
+        return jobid;
+    }
+    public String getTitle() {
+        return title;
+    }
+    public String getDescription() {
+        return description;
+    }
+    public double getSalary() {
+        return salary;
+    }
+}
