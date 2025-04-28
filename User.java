@@ -1,0 +1,33 @@
+import java.io.Serializable;
+
+public class User implements Serializable {
+    protected String email;
+    protected String password;
+    public User(String email, String password) {
+        this.email = email;
+        this.password = password;
+    }
+    public String getEmail() {
+        return email;
+    }
+    public boolean validatePassword(String password) {
+        return this.password.equals(password);
+    }
+}
+
+class Employer extends User {
+    public Employer( String email, String password) {
+        super(email, password);
+    }
+}
+
+class Jobseeker extends User {
+    private String resume;
+    public Jobseeker(String email, String password, String resume) {
+        super(email, password);
+        this.resume = resume;
+    }
+    public String getResume() {
+        return resume;
+    }
+}
