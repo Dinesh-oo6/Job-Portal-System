@@ -1,6 +1,4 @@
-import java.io.Serializable;
-
-public class Jobapplication implements Serializable {
+public class Jobapplication {
     private String jobid;
     private String email;
     public Jobapplication(String jobid, String email) {
